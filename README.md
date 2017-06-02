@@ -1,6 +1,6 @@
 # Capybara::Ember
 
-Makes Poltergeist's `click` method aware of the Ember Run Loop.
+Makes Poltergeist/Selenium's `click` method aware of the Ember Run Loop.
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-Require `capybara/ember` in your test file, for example in `rails_helper.rb` or `spec_helper.rb` to set up Capybara's Poltergeist driver and make it aware of the [Ember Run Loop](http://emberjs.com/guides/understanding-ember/run-loop/). This forces Poltergeist to wait with `click` until the Ember Run Loop has finished, so that the clicks will be effective.
+Require `capybara/ember` in your test file, for example in `rails_helper.rb` or `spec_helper.rb` to set up Capybara's Poltergeist/Selenium driver and make it aware of the [Ember Run Loop](http://emberjs.com/guides/understanding-ember/run-loop/). This forces Poltergeist/Selenium to wait with `click` until the Ember Run Loop has finished, so that the clicks will be effective.
 
 No modification to your existing tests are necessary.
 
