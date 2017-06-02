@@ -21,3 +21,9 @@ if defined?(Capybara::Poltergeist::Node)
   Capybara::Poltergeist::Node.send(:alias_method, :click_original, :click)
   Capybara::Poltergeist::Node.send(:alias_method, :click, :click_ensuring_ember_run_loop_has_finished)
 end
+
+if defined?(Capybara::Selenium::Node)
+  Capybara::Selenium::Node.send(:include, Capybara::Ember::AsyncHelpers)
+  Capybara::Selenium::Node.send(:alias_method, :click_original, :click)
+  Capybara::Selenium::Node.send(:alias_method, :click, :click_ensuring_ember_run_loop_has_finished)
+end
